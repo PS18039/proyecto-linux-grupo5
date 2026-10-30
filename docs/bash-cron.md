@@ -48,5 +48,11 @@ Los resultados se guardan en:
 - Se comprobo que el reporte se guarda en el archivo de registro.
 
 ## Resultado
-El script funciona correctamente de forma manual.
-Queda pendiente confirmar una ejecucion automatica de Cron.
+El script funciona correctamente y muestra la informacion del servidor.
+
+Tambien se comprobo que cron ejecuto el reporte automaticamente
+el 29 de octubre de 2026 a las 23:00.
+
+Se guardaron las capturas de las pruebas en la carpeta
+evidencias/bash-cron/.
+
