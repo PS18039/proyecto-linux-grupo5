@@ -18,9 +18,9 @@ para implementar un servicio web funcional.
 | Integrante | Carné | Responsabilidad |
 |---|---|---|
 | Ronald Oswaldo Pérez Santos | PS18039 | Fases 1 y 3: Debian, usuarios, permisos y Git |
-| Josué Emanuel Zúniga Ramírez | ZR19012 | Fase 2: Bash y Cron |
-| Kenia Yamileth Murillo Gutiérrez | MG25049 | Fases 4 y 5: Docker y Nginx |
-| Kevin Daniel Hernández Belloso | HH25003 | Fases 6 y 7: Dockerfile, redes y volúmenes |
+| Josué Emanuel Zúniga Ramírez | ZR19012 |  |
+| Kenia Yamileth Murillo Gutiérrez | MG25049 |  |
+| Kevin Daniel Hernández Belloso | HH25003 |  |
 
 **Fase 8:** Integración, pruebas, evidencias y presentación grupal.
 
