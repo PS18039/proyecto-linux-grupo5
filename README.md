@@ -18,7 +18,7 @@ para implementar un servicio web funcional.
 | Integrante | Carné | Responsabilidad |
 |---|---|---|
 | Ronald Oswaldo Pérez Santos | PS18039 | Fases 1 y 3: Debian, usuarios, permisos y Git |
-| Josué Emanuel Zúniga Ramírez | ZR19012 |  |
+| Josué Emanuel Zúniga Ramírez | ZR19012 | Fase 5: Servidor Web Containerizado (Nginx) |
 | Kenia Yamileth Murillo Gutiérrez | MG25049 |  |
 | Kevin Daniel Hernández Belloso | HH25003 |  |
 
@@ -104,3 +104,45 @@ incorporarán al repositorio conforme avance cada fase.
 
 Proyecto en desarrollo. La integración y validación final
 se realizarán cuando todas las fases estén completadas.
+
+## Fase 5: Servidor Web Containerizado (Nginx)
+
+**Responsable:** Josué Emanuel Zúniga Ramírez
+
+**Objetivo:** publicar una página web con Nginx dentro de un contenedor Docker, accesible desde el navegador en el puerto 8080.
+
+**Archivos de esta fase:**
+- `web/index.html`: página web del proyecto.
+- `scripts/iniciar_nginx.sh`: script que copia la página a `/proyecto/web`, asigna permisos y levanta el contenedor.
+
+**Pasos realizados:**
+
+1. **Preparar la página.** Se copió `index.html` a `/proyecto/web/`.
+2. **Permisos de lectura para Nginx.** Se usó `setfacl` para que el usuario con UID 101 (el que usa Nginx dentro del contenedor) pueda leer el directorio y el archivo.
+3. **Ejecutar el contenedor Nginx:**
+   ```bash
+   docker run -d \
+     --name nginx-grupo5 \
+     -p 8080:80 \
+     -v /proyecto/web:/usr/share/nginx/html:ro \
+     nginx:latest
+   ```
+   - `-d`: se ejecuta en segundo plano (detached).
+   - `-p 8080:80`: mapea el puerto 8080 del host al puerto 80 del contenedor.
+   - `-v ...:ro`: monta `/proyecto/web` en `/usr/share/nginx/html` en modo solo lectura.
+4. **Verificar el servicio:**
+   ```bash
+   docker ps
+   curl -I http://localhost:8080
+   docker logs nginx-grupo5
+   docker inspect -f '{{json .Mounts}}' nginx-grupo5
+   ```
+5. **Probar en el navegador** en `http://localhost:8080`.
+
+**Resultados:**
+- El contenedor `nginx-grupo5` quedó en estado `Up`, con el puerto `0.0.0.0:8080->80/tcp`.
+- `curl -I` devolvió `HTTP/1.1 200 OK`.
+- Los logs muestran solo mensajes de arranque (`notice`), sin errores.
+- El montaje es de tipo `bind`, de `/proyecto/web` a `/usr/share/nginx/html`, en solo lectura.
+- El navegador muestra la página "Proyecto Final - Grupo 5".
+
