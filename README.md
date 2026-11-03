@@ -31,12 +31,12 @@ Configurar y administrar un servidor Debian 13 utilizando herramientas de softwa
 | Kenia Yamileth Murillo Gutiérrez | MG25049 |   |
 | Josué Emanuel Zúniga Ramírez | ZR19012 |   |
 | Ronald Oswaldo Pérez Santos | PS18039 | Fases 1 y 3: Debian, usuarios, permisos y Git |
-| Kevin Daniel Hernández Belloso | HH25003 |   |
+
+| Kevin Daniel Hernández Belloso | HH25003 | Fase 7: Redes, volúmenes y pruebas. |
 
 **Fase 8:** Integración, pruebas y verificación final del proyecto.
 
 ## Herramientas utilizadas
-
 - Debian 13
 - VirtualBox
 - Bash
