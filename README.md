@@ -28,11 +28,12 @@ Configurar y administrar un servidor Debian 13 utilizando herramientas de softwa
 
 | Integrante | Carné | Responsabilidad |
 |---|---|---|
-| Kenia Yamileth Murillo Gutiérrez | MG25049 |   |
-| Josué Emanuel Zúniga Ramírez | ZR19012 |   |
+| Kenia Yamileth Murillo Gutiérrez | MG25049 | Fase 6: Dockerfile e imagen personalizada |
+| Josué Emanuel Zúniga Ramírez | ZR19012 | Fase 5: Servidor web Nginx |
 | Ronald Oswaldo Pérez Santos | PS18039 | Fases 1 y 3: Debian, usuarios, permisos y Git |
+| Kevin Daniel Hernández Belloso | HH25003 | Fase 7: Redes y volúmenes Docker |
 
-| Kevin Daniel Hernández Belloso | HH25003 | Fase 7: Redes, volúmenes y pruebas. |
+**Fases 2, 4 y 8:** Automatización, Docker e integración y pruebas finales del proyecto.
 
 **Fase 8:** Integración, pruebas y verificación final del proyecto.
 
